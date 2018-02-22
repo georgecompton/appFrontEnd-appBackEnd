@@ -1,0 +1,24 @@
+<div class="container">
+
+    <h2>Product Form</h2>
+
+    <form (ngSubmit)="processForm()">
+        <div class="form group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" [(ngModel)]="product.name">
+        </div>
+        <div class="form group">
+            <label for="description">Description</label>
+            <input type="text" name="description" class="form-control" [(ngModel)]="product.description">
+        </div>
+        <div class="form group">
+          <label for="price">Price</label>
+          <input type="text" name="price" class="form-control" [(ngModel)]="product.price">
+        </div>
+
+        <div class="form-group" style="padding-top: 15px">
+          <a class="btn btn-default" href="/">Cancelar</a>
+          <input type="submit" value="save" class="btn btn-primary">
+        </div>
+    </form>
+</div>

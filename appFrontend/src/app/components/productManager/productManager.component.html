@@ -1,0 +1,27 @@
+<div class="container">
+
+    <h2>Product Manager</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Operations </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.price}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteProduct(product)">Delete</button>
+                        <button class="btn btn-primary" (click)="updateProduct(product)">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-success" (click)="newProduct()">New Product</button>
+</div>
